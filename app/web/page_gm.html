@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrandMasters</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="page_gm">
+    <header class="navbar">
+        <!-- Left Section: Logo & Buttons -->
+        <div class="navbar-left">
+            <div class="navbar-logo">
+                <img src="gm.svg" alt="Icon description" class="icon">
+            </div>
+            <div class="navbar-buttons">
+                <a href="index.html">
+                    <button>Home</button>
+                </a>
+                <a href="page_raid.html">
+                    <button>
+                        Raid
+                    </button>
+                </a>
+                <a href="page_dungeon.html">
+                    <button>
+                        Dungeon
+                    </button>
+                </a>
+                <a href="page_gm.html">
+                    <button>
+                        GrandMaster
+                    </button>
+                </a>
+            </div>
+        </div>
+
+        <!-- Right Section: Input Field -->
+        <input type="text" class="navbar-input" placeholder="Bungie Name" onkeypress="searchPlayer(event)" id="search-bar">
+    </header>
+    <aside class="left-sidebar"></aside>
+
+    <div class="card-container" id="card-container"></div>
+
+    <main>
+    </main>
+
+    <script type="text/javascript" src="/eel.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

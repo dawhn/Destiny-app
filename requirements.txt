@@ -1,0 +1,6 @@
+Eel~=0.17.0
+Flask~=3.0.3
+requests~=2.32.3
+sqlmodel~=0.0.22
+SQLAlchemy~=2.0.34
+starlette~=0.37.2

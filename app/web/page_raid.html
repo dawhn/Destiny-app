@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raids</title>
+    <link rel="icon" type="images/x-icon" href="https://i.imgur.com/7vBLdL4.jpeg">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="page_raid">
+    <header class="navbar">
+        <!-- Left Section: Logo & Buttons -->
+        <div class="navbar-left">
+            <div class="navbar-logo">
+                <img src="raid.svg" alt="Icon description" class="icon">
+            </div>
+            <div class="navbar-buttons">
+                <a href="index.html">
+                    <button>Home</button>
+                </a>
+                <a href="page_raid.html">
+                    <button>
+                        Raid
+                    </button>
+                </a>
+                <a href="page_dungeon.html">
+                    <button>
+                        Dungeon
+                    </button>
+                </a>
+                <a href="page_gm.html">
+                    <button>
+                        GrandMaster
+                    </button>
+                </a>
+            </div>
+        </div>
+
+        <!-- Right Section: Input Field -->
+        <input type="text" class="navbar-input" placeholder="Bungie Name" onkeypress="searchPlayer(event)" id="search-bar">
+    </header>
+
+
+    <main>
+        <div class="split-main">
+            <div class="player-header">
+                <div class="player">
+                    <div class="player-emblem">
+                        <img alt="emblem" id="player_emblem_img" src="">
+                    </div>
+                    <div class="player-info">
+                        <div class="player-logo">
+                            <img alt="logo" id="player_logo_img" src="">
+                        </div>
+                        <div class="player-name">
+                            <p id="player_name"></p>
+                        </div>
+                        <div class="player-clan">
+                            <p id="clan_name"></p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="card-container" id="card-container">
+                <!-- Salvation's Edge -->
+                <div class="card" id="Salvation's Edge">
+                    <div class="image-container">
+                        <img src="../images/Salvation's%20Edge.png" alt="Salvation's Edge">
+                        <h2 class="card-title">Salvation's Edge</h2>
+                    </div>
+                    <div class="seal">
+                        <img src="" alt="seal" class="image_seal">
+                    </div>
+                    <div class="card-infos">
+                        <div class="raid-clears">
+                            <p class="info-title">clears</p>
+                            <p class="clears"></p>
+                        </div>
+                        <div class="raid-fastest">
+                            <p class="info-title">fastest</p>
+                            <p class="fastest"></p>
+                        </div>
+                        <div class="raid-average">
+                            <p class="info-title">average</p>
+                            <p class="average"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Crota's End -->
+                <div class="card" id="Crota's End">
+                    <div class="image-container">
+                        <img src="../images/Crota's%20End.png" alt="Crota's End">
+                        <h2 class="card-title">Crota's End</h2>
+                    </div>
+                    <div class="seal">
+                        <img src="" alt="seal" class="image_seal">
+                    </div>
+                    <div class="card-infos">
+                        <div class="raid-clears">
+                            <p class="info-title">clears</p>
+                            <p class="clears"></p>
+                        </div>
+                        <div class="raid-fastest">
+                            <p class="info-title">fastest</p>
+                            <p class="fastest"></p>
+                        </div>
+                        <div class="raid-average">
+                            <p class="info-title">average</p>
+                            <p class="average"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Root of Nightmares -->
+                <div class="card" id="Root of Nightmares">
+                    <div class="image-container">
+                        <img src="../images/Root%20of%20Nightmares.png" alt="Root of Nightmares">
+                        <h2 class="card-title">Root of Nightmares</h2>
+                    </div>
+                    <div class="seal">
+                        <img src="" alt="seal" class="image_seal">
+                    </div>
+                    <div class="card-infos">
+                        <div class="raid-clears">
+                            <p class="info-title">clears</p>
+                            <p class="clears"></p>
+                        </div>
+                        <div class="raid-fastest">
+                            <p class="info-title">fastest</p>
+                            <p class="fastest"></p>
+                        </div>
+                        <div class="raid-average">
+                            <p class="info-title">average</p>
+                            <p class="average"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- King's Fall -->
+                <div class="card" id="King's Fall">
+                    <div class="image-container">
+                        <img src="../images/King's%20Fall.png" alt="King's Fall">
+                        <h2 class="card-title">King's Fall</h2>
+                    </div>
+                    <div class="seal">
+                        <img src="" alt="seal" class="image_seal">
+                    </div>
+                    <div class="card-infos">
+                        <div class="raid-clears">
+                            <p class="info-title">clears</p>
+                            <p class="clears"></p>
+                        </div>
+                        <div class="raid-fastest">
+                            <p class="info-title">fastest</p>
+                            <p class="fastest"></p>
+                        </div>
+                        <div class="raid-average">
+                            <p class="info-title">average</p>
+                            <p class="average"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vow of the Disciple -->
+                <div class="card" id="Vow of the Disciple">
+                    <div class="image-container">
+                        <img src="../images/Vow%20of%20the%20Disciple.png"alt="Vow of the Disciple">
+                        <h2 class="card-title">Vow of the Disciple</h2>
+                    </div>
+                    <div class="seal">
+                        <img src="" alt="seal" class="image_seal">
+                    </div>
+                    <div class="card-infos">
+                        <div class="raid-clears">
+                            <p class="info-title">clears</p>
+                            <p class="clears"></p>
+                        </div>
+                        <div class="raid-fastest">
+                            <p class="info-title">fastest</p>
+                            <p class="fastest"></p>
+                        </div>
+                        <div class="raid-average">
+                            <p class="info-title">average</p>
+                            <p class="average"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vault of Glass -->
+                <div class="card" id="Vault of Glass">
+                    <div class="image-container">
+                        <img src="../images/Vaulf%20of%20Glass.png" alt="Vault of Glass">
+                        <h2 class="card-title">Vault of Glass</h2>
+                    </div>
+                    <div class="seal">
+                        <img src="" alt="seal" class="image_seal">
+                    </div>
+                    <div class="card-infos">
+                        <div class="raid-clears">
+                            <p class="info-title">clears</p>
+                            <p class="clears"></p>
+                        </div>
+                        <div class="raid-fastest">
+                            <p class="info-title">fastest</p>
+                            <p class="fastest"></p>
+                        </div>
+                        <div class="raid-average">
+                            <p class="info-title">average</p>
+                            <p class="average"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Deep Stone Crypt -->
+                <div class="card" id="Deep Stone Crypt">
+                    <div class="image-container">
+                        <img src="../images/Deep%20Stone%20Crypt.png" alt="Deep Stone Crypt">
+                        <h2 class="card-title">Deep Stone Crypt</h2>
+                    </div>
+                    <div class="seal">
+                        <img src="" alt="seal" class="image_seal">
+                    </div>
+                    <div class="card-infos">
+                        <div class="raid-clears">
+                            <p class="info-title">clears</p>
+                            <p class="clears"></p>
+                        </div>
+                        <div class="raid-fastest">
+                            <p class="info-title">fastest</p>
+                            <p class="fastest"></p>
+                        </div>
+                        <div class="raid-average">
+                            <p class="info-title">average</p>
+                            <p class="average"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Garden of Salvation -->
+                <div class="card" id="Garden of Salvation">
+                    <div class="image-container">
+                        <img src="../images/Garden%20of%20Salvation.png" alt="Garden of Salvation">
+                        <h2 class="card-title">Garden of Salvation</h2>
+                    </div>
+                    <div class="seal">
+                        <img src="" alt="seal" class="image_seal">
+                    </div>
+                    <div class="card-infos">
+                        <div class="raid-clears">
+                            <p class="info-title">clears</p>
+                            <p class="clears"></p>
+                        </div>
+                        <div class="raid-fastest">
+                            <p class="info-title">fastest</p>
+                            <p class="fastest"></p>
+                        </div>
+                        <div class="raid-average">
+                            <p class="info-title">average</p>
+                            <p class="average"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Last Wish -->
+                <div class="card" id="Last Wish">
+                    <div class="image-container">
+                        <img src="../images/Last%20Wish.png" alt="Last Wish">
+                        <h2 class="card-title">Last Wish</h2>
+                    </div>
+                    <div class="seal">
+                        <img src="" alt="seal" class="image_seal">
+                    </div>
+                    <div class="card-infos">
+                        <div class="raid-clears">
+                            <p class="info-title">clears</p>
+                            <p class="clears"></p>
+                        </div>
+                        <div class="raid-fastest">
+                            <p class="info-title">fastest</p>
+                            <p class="fastest"></p>
+                        </div>
+                        <div class="raid-average">
+                            <p class="info-title">average</p>
+                            <p class="average"></p>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Crown of Sorrow -->
+                <div class="card" id="Crown of Sorrow">
+                    <div class="image-container">
+                        <img src="../images/Crown%20of%20Sorrow.png" alt="Crown of Sorrow">
+                        <h2 class="card-title">Crown of Sorrow</h2>
+                    </div>
+                    <div class="seal">
+                        <img src="" alt="seal" class="image_seal">
+                    </div>
+                    <div class="card-infos">
+                        <div class="raid-clears">
+                            <p class="info-title">clears</p>
+                            <p class="clears"></p>
+                        </div>
+                        <div class="raid-fastest">
+                            <p class="info-title">fastest</p>
+                            <p class="fastest"></p>
+                        </div>
+                        <div class="raid-average">
+                            <p class="info-title">average</p>
+                            <p class="average"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scourge of the Past-->
+                <div class="card" id="Scourge of the Past">
+                    <div class="image-container">
+                        <img src="../images/Scourge%20of%20the%20Past.png" alt="Scourge of the Past">
+                        <h2 class="card-title">Scourge of the Past</h2>
+                    </div>
+                    <div class="card-infos">
+                        <div class="raid-clears">
+                            <p class="info-title">clears</p>
+                            <p class="clears"></p>
+                        </div>
+                        <div class="raid-fastest">
+                            <p class="info-title">fastest</p>
+                            <p class="fastest"></p>
+                        </div>
+                        <div class="raid-average">
+                            <p class="info-title">average</p>
+                            <p class="average"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Spire of Stars -->
+                <div class="card" id="Leviathan, Spire of Stars">
+                    <div class="image-container">
+                        <img src="../images/Spire%20of%20Stars.png" alt="Spire of Stars">
+                        <h2 class="card-title">Leviathan, Spire of Stars</h2>
+                    </div>
+                    <div class="card-infos">
+                        <div class="raid-clears">
+                            <p class="info-title">clears</p>
+                            <p class="clears"></p>
+                        </div>
+                        <div class="raid-fastest">
+                            <p class="info-title">fastest</p>
+                            <p class="fastest"></p>
+                        </div>
+                        <div class="raid-average">
+                            <p class="info-title">average</p>
+                            <p class="average"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Eater of Worlds -->
+                <div class="card" id="Leviathan, Eater of Worlds">
+                    <div class="image-container">
+                        <img src="../images/Eater%20of%20Worlds.png" alt="Eater of Worlds">
+                        <h2 class="card-title">Eater of Worlds</h2>
+                    </div>
+                    <div class="card-infos">
+                        <div class="raid-clears">
+                            <p class="info-title">clears</p>
+                            <p class="clears"></p>
+                        </div>
+                        <div class="raid-fastest">
+                            <p class="info-title">fastest</p>
+                            <p class="fastest"></p>
+                        </div>
+                        <div class="raid-average">
+                            <p class="info-title">average</p>
+                            <p class="average"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Leviathan -->
+                <div class="card" id="Leviathan">
+                    <div class="image-container">
+                        <img src="../images/Leviathan.png" alt="Leviathan">
+                        <h2 class="card-title">Leviathan</h2>
+                    </div>
+                    <div class="card-infos">
+                        <div class="raid-clears">
+                            <p class="info-title">clears</p>
+                            <p class="clears"></p>
+                        </div>
+                        <div class="raid-fastest">
+                            <p class="info-title">fastest</p>
+                            <p class="fastest"></p>
+                        </div>
+                        <div class="raid-average">
+                            <p class="info-title">average</p>
+                            <p class="average"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script type="text/javascript" src="/eel.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="script_raids.js"></script>
+</body>
+</html>
